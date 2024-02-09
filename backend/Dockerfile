@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . ./
 RUN dotnet restore
-RUN dotnet publish -c Release -o out
+RUN dotnet publish -c Release -o out src/NexLab.Flux.Api
 
 # Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
