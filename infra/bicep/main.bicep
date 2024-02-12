@@ -13,3 +13,12 @@ module cluster './cluster.bicep' = {
     sshRSAPublicKey: sshRSAPublicKey
   }
 }
+
+module containerRegistry './containerRegistry.bicep' = {
+  name: 'nexlab-flux-demo-registry'
+  params: {
+    acrName: 'nexlabfluxdemo'
+    location: location
+    acrSku: 'Basic'
+  }
+}
