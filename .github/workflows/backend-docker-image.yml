@@ -3,10 +3,10 @@ name: Frontend Docker Image CI
 on:
   push:
     branches: ["main"]
-    paths: ["frontend"]
+    paths: ["backend"]
   pull_request:
     branches: ["main"]
-    paths: ["frontend"]
+    paths: ["backend"]
 
 jobs:
   build:
@@ -14,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build frontend --tag nexlab-flux-frontend:$(date +%s)
+        run: docker build backend --tag nexlab-flux-backend:$(date +%s)
