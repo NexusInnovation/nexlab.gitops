@@ -1,5 +1,6 @@
 param location string = resourceGroup().location
 param sshRSAPublicKey string
+param githubServicePrincipalId string
 
 module cluster './cluster.bicep' = {
   name: 'nexlab-flux-demo-cluster'
@@ -20,5 +21,6 @@ module containerRegistry './containerRegistry.bicep' = {
     acrName: 'nexlabfluxdemo'
     location: location
     acrSku: 'Basic'
+    principalId: githubServicePrincipalId
   }
 }
