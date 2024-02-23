@@ -14,5 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build the Docker image
-        run: docker build frontend --tag nexlab-gitops-app-frontend:$(date +%s)
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - run: |
+          TAG=${{secrets.REGISTRY_LOGIN_SERVER}}/nexlab-gitops-app-frontend:${{ github.sha }}
+          docker build frontend -t $TAG
+          docker push $TAG
