@@ -1,4 +1,4 @@
-# GitOps avec Flux
+# Démo GitOps 
 # BootStrap phase 1 
 (Outlines simplifiées à raffiner plus tard)
 

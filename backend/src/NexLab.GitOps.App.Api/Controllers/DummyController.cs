@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace NexLab.Flux.Api.Controllers;
+namespace NexLab.GitOps.App.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]

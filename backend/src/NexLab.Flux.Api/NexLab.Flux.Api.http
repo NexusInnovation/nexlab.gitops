@@ -1,6 +1,0 @@
-@NexLab.Flux.Api_HostAddress = http://localhost:5253
-
-GET {{NexLab.Flux.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

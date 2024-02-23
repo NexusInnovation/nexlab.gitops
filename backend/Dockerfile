@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY . ./
 RUN dotnet restore
-RUN dotnet publish -c Release -o out src/NexLab.Flux.Api
+RUN dotnet publish -c Release -o out src/NexLab.GitOps.App.Api
 
 # Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/out .
-ENTRYPOINT ["dotnet", "NexLab.Flux.Api.dll"]
+ENTRYPOINT ["dotnet", "NexLab.GitOps.App.Api.dll"]

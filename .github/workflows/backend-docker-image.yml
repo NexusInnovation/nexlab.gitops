@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build backend --tag nexlab-flux-backend:$(date +%s)
+        run: docker build backend --tag nexlab-gitops-app-backend:$(date +%s)

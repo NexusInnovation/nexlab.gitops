@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7899FFB6-C169-4256-B361-878301F2D508}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexLab.Flux.Api", "src\NexLab.Flux.Api\NexLab.Flux.Api.csproj", "{456FBF75-76CC-46E8-8F57-29D66B34925F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexLab.GitOps.App.Api", "src\NexLab.GitOps.App.Api\NexLab.GitOps.App.Api.csproj", "{456FBF75-76CC-46E8-8F57-29D66B34925F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
