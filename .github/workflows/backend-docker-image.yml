@@ -10,9 +10,19 @@ on:
     paths: ["backend/**"]
 
 jobs:
-  build:
+  build-and-push-image:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build the Docker image
-        run: docker build backend --tag nexlab-gitops-app-backend:$(date +%s)
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - uses: azure/docker-login@vi
+        with:
+          login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - run: |
+          TAG=${{secrets.REGISTRY_LOGIN_SERVER}}/nexlab-gitops-app-backend:${{ github.sha }}
+          docker build backend -t $TAG
+          docker push $TAG
