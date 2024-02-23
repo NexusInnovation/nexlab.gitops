@@ -16,11 +16,3 @@ https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-cli
 
 ## Pointer kubectl vers le cluster AKS 
 https://learn.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials
-
-## Exécuter le script de bootstrapping de Flux
-Dans ce cas-ci, on fonctionne en monorepo, alors il faut pointer vers une répo existente 
-
-https://fluxcd.io/flux/installation/bootstrap/github/#bootstrap-without-a-github-pat
-
-Note : Flux peut aussi être "bootstrapped" par Bicep directement, mais c'est moins bien documenté et il y a une perte de flexibilité. 
-
