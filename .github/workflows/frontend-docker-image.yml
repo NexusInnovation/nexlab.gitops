@@ -23,6 +23,6 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - run: |
-          TAG=${{secrets.REGISTRY_LOGIN_SERVER}}/nexlab-gitops-app-frontend:${{ github.sha }}
-          docker build frontend -t $TAG -t develop
-          docker push $TAG
+          IMAGE=${{secrets.REGISTRY_LOGIN_SERVER}}/nexlab-gitops-app-frontend
+          docker build backend -t $IMAGE:${{ github.sha }} -t $IMAGE:develop
+          docker push -a $IMAGE
