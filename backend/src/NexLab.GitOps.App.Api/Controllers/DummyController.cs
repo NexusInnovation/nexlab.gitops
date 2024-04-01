@@ -13,9 +13,9 @@ public class DummyController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet]
-    public DummyResponse Get()
+    [HttpGet("{message}")]
+    public string Get(string message)
     {
-        return new DummyResponse("B");
+        return message;
     }
 }
