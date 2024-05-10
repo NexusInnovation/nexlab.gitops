@@ -9,7 +9,7 @@ function App() {
     const msg = window.location.pathname.slice(1);
     fetch(`/api/dummy/${msg}`)
       .then(res => res.text())
-      .then(res => setMsg(cowsay.say({ text: res })));
+      .then(res => setMsg(cowsay.say({ text: res, f: 'cat' })));
   }, []);
 
   return (
