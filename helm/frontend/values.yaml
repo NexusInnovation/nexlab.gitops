@@ -4,7 +4,7 @@ image:
   repository: nexlabgitopsdemo.azurecr.io
   name: nexlab-gitops-app-frontend
   tag: develop
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 containerPort: 80
 
