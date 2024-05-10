@@ -1,19 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [msg, setMsg] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    fetch('/api/dummy/test')
+      .then(res => res.text())
+      .then(res => setMsg(res));
+  }, []);
 
   return (
     <>
-      <h1>Nexlab Frontend</h1>
+      <h1>Nexlab App Frontend</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        {msg ? msg : 'Loading...'}
       </div>
     </>
   )
