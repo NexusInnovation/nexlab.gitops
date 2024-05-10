@@ -14,7 +14,7 @@ function App() {
     <>
       <h1>Nexlab App Frontend</h1>
       <div className="card">
-        {msg ? msg : 'Loading...'}
+        {msg ?? 'Loading...'}
       </div>
     </>
   )
