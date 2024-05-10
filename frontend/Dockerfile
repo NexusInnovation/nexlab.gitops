@@ -3,4 +3,4 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 COPY . . 
-ENTRYPOINT npm run dev
+ENTRYPOINT npx vite --host 0.0.0.0
