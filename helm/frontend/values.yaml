@@ -13,8 +13,6 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  annotations: {}
+  hostname: nexlab.whydoiexist.xyz
   path: /
-  hosts: []
-  tls: []
+  className: webapprouting.kubernetes.azure.com
