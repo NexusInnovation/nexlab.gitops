@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: nexlabgitopsdemo.azurecr.io
+  name: nexlab-gitops-app-backend
+  tag: develop
+  pullPolicy: IfNotPresent
+
+containerPort: 80
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  hostname: nexlab.whydoiexist.xyz
+  path: /api(/|$)(.*)
+  className: webapprouting.kubernetes.azure.com
+  extraAnnotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2

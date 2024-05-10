@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nexlab-gitops-app-frontend
+description: Backend chart for nexlab-gitops-app
+
+type: application
+
+version: 0.1.0
+
+appVersion: "0.1.0"
