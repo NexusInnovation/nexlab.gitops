@@ -2,7 +2,7 @@ import * as cowsay from "cowsay";
 import { useEffect, useState } from 'react'
 import './App.css'
 
-function App() {
+const App = () => {
   const [msg, setMsg] = useState<string | undefined>(undefined);
 
   useEffect(() => {
