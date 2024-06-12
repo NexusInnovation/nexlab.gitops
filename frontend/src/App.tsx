@@ -1,4 +1,4 @@
-import * as cowsay from "cowsay";
+import { say } from "cowsay";
 import { useEffect, useState } from 'react'
 import './App.css'
 
@@ -9,7 +9,7 @@ const App = () => {
     const msg = window.location.pathname.slice(1);
     fetch(`/api/dummy/${msg}`)
       .then(res => res.text())
-      .then(res => setMsg(cowsay.say({ text: res, f: 'cat' })));
+      .then(res => setMsg(say({ text: res })));
   }, []);
 
   return (
