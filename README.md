@@ -12,7 +12,7 @@ Le but de l'exercice était de déterminer si une approche GitOps pouvait améli
 Le résultat de l'analysis était négatif. 
 
 ### Faible adjacence avec les pratiques existentes de Nexus
-Il serait très difficile d'adopter cette pratique de manière significative sans passer unilatéralemnet à Kubernetes comme plateforme cible, ou minimalement à un système dérivé tel que Azure Container Apps, et celà demandrait une quantité de refactoring et d'entraînement de personnel suffisament majeure pour représenter un changement de paradigme organisationnel. 
+Il serait très difficile d'adopter cette pratique de manière significative sans passer unilatéralemnet à Kubernetes comme plateforme cible, ou minimalement à un système dérivé tel que Azure Container Apps, et cela demandrait une quantité de refactoring et d'entraînement de personnel suffisament majeure pour représenter un changement de paradigme organisationnel. 
 
 ### Ne remplace pas le besoin pour l'IaC
 L'introduction de Kubernetes dans le mélange permettrait de réduire la quantité de ressources Azure à déployer et maintenir, mais le cluster K8s lui-même et ses dépendences doivent quand même être gérés par IaC. Au final, on rajouterait une technologie additionnelle dans notre stack, ce qui réduit la proposition de valeur.
