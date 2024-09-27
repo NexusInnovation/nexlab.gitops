@@ -23,7 +23,7 @@ Il n'existait pas au moment du projet de recettes Bicep pour le déploiement d'u
 Pour réaliser un déploiement par IaC réellement idempotent, il aurait fallu dans les deux cas maintenir des scripts et des intégrations *custom*, comme [cet exemple d'un template Bicep pour déployer des ressources *Helm*.](https://pixelrobots.co.uk/2024/01/introducing-the-helm-install-command-bicep-module-streamlining-aks-bootstrapping/)
 
 ### Immaturité des technologies
-ArgoCD est une plateforme stable et mature, mais certains des systèmes connexes qui permettent notamment de déployer des environnements de Pull Request, ou de mettre ajour une image OCI automatiquement, sont encore en développement actif et n'ont pas de version stable ou n'avaient pas de version stable au moment de cete analyse. 
+ArgoCD est une plateforme stable et mature, mais certains des systèmes connexes qui permettent notamment de déployer des environnements de Pull Request, ou de mettre à jour une image OCI automatiquement, sont encore en développement actif et n'ont pas de version stable ou n'avaient pas de version stable au moment de cete analyse. 
 
 ## Arborescence du projet
 * `.github` : Les actions GitHub qui construisent et publient les images Docker pour le frontend et le backend.
