@@ -6,7 +6,7 @@ Le but de l'exercice était de déterminer si une approche GitOps pouvait améli
 
 * Permettre aux devs de gérer leur infra avec des outils et des pratiques qu'ils/elles maitrisent déjà (Git)
 * Enrichir l'IaC en y rajoutant l'état des nos environnements (plutôt que seulement la recette)
-* Réduire les pipelines procédurales à maintenir en inverstant le contrôle
+* Réduire les pipelines procédurales à maintenir en inversant le contrôle
 
 ## Conclusion
 Le résultat de l'analysis était négatif. 
